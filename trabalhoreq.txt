@@ -1,0 +1,12 @@
+Criar agenda trabalho alexandre 
+
+agenda tera nome endereço telefone email idade bool pr
+
+metodos seraaoo 
+1 incluir* 
+2 listar*
+3 excluir 
+4 excluir 
+5 buscar 
+6 alterar 
+7 sair 
