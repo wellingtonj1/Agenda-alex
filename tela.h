@@ -1,7 +1,6 @@
 #ifndef TELA_H
 #define TELA_H
-#include "agenda.hpp"
-#include "agenda.cpp"
+#include "agenda.h"
 #include <iostream>
 
 using namespace std;
@@ -11,9 +10,9 @@ class tela
 	public:
 	void apresentaopcao()
 	{
-		cout<<" 1 incluir \n 2 listar \n 3 excluir \n 4 excluir \n 5 buscar \n 6 alterar \n 7 sair"<<endl; 
+		cout<<"1 incluir \n2 listar \n3 excluir \n4 excluir \n5 buscar \n6 alterar \n7 sair\n"<<endl; 
 	}
-	int escolheopcao()
+	void escolheopcao()
 	{
 		int x;
 		do
@@ -24,42 +23,41 @@ class tela
 		{
 			case 1: //incluir
 			{
-				return 1;
-				break;
+				 
+				 break;
 			}
 			case 2: //listar
 			{
-				return 2;
+				
 				break;
 			}
 			case 3: //excluir 
 			{
-				return 3;
+				
 				break;
 			}
 			case 4: //excluir
 			{
-				return 4;
+				
 				break;
 			}
 			case 5: //buscar 
 			{
-				return 5;
+				
 				break;
 			}
 			case 6: //alterar 
 			{
-				return 6;
+				
 				break;
 			}
 			case 7: //sair 
 			{
-				return 7;
+				
 				break;
 			}
 			
 		}
-		
 	}	
 };
 #endif
