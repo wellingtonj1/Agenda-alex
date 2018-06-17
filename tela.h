@@ -1,6 +1,7 @@
 #ifndef TELA_H
 #define TELA_H
 #include "agenda.h"
+#include <fstream>
 using namespace std;
 
 //tera nome endereço telefone email idade bool pr
@@ -10,7 +11,6 @@ using namespace std;
 
     agenda* pessoa;
     public:
-    int qt;
     int x;
     tela();
     bool changewind(int y);

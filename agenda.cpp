@@ -3,6 +3,14 @@
 
 using namespace std;
 
+void agenda::gettudo()
+{
+    nome;
+    endere;
+    email;
+    idade;
+    telefone;
+}
 
 void agenda::getagenda()
 {
@@ -63,7 +71,7 @@ void agenda::setidad()
 void agenda::setnume()
 {
     int num;
-    cout<<"\n\t Digite o telefone com o dd com o numero 9 obrigatorio\n";
+    cout<<"\n\t Digite o telefone com o dd com o numero 9 obrigatorio : ";
 
     do
     {

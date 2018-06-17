@@ -3,6 +3,7 @@
 #include "tela.h"
 #include <iostream>
 
+
 using namespace std;
 
 //tera nome endereço telefone email idade bool pr
@@ -17,7 +18,7 @@ class agenda
 		int idade,telefone;
 
 	public:
-
+        void gettudo();
         void setagenda();
         void getagenda();
         void setnome();

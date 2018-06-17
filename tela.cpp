@@ -1,5 +1,6 @@
 #include "tela.h"
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -8,6 +9,7 @@ tela::tela()
     x=0;
     cout<<"1 incluir \n2 listar \n3 excluir \n4 excluir \n5 buscar \n6 alterar \n7 sair\n"<<endl;
     pessoa= new agenda[x];
+
 }
 bool tela::changewind(int y)
 {
@@ -18,22 +20,24 @@ bool tela::changewind(int y)
                 string escolha;
                 do
                 {
-                    qt++;
-                    x++;
                     pessoa[x].setagenda();
                     cout<<"\nDeseja Adicionar mais alguma pessoa nesta agenda ? S ou N : ";
                     cin>>escolha;
-
+                    x++;
                 }
                 while(escolha=="S"||escolha=="s");
                 break;
             }
             case 2: //listar
             {
-                for(int i=0;i<qt;i++)
+                fstream fgravar;
+                fgravar.open("Pessoa.txt",ios::ate | ios::out | ios::in);
+
+                for(int i=0;i<x;i++)
                 {
-                    pessoa[i].getagenda();
+                    fgravar.write()
                 }
+                fgravar.close();
                 break;
             }
             case 3: //excluir
