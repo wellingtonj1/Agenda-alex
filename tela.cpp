@@ -11,58 +11,63 @@ tela::tela()
 }
 bool tela::changewind(int y)
 {
-    switch(y)
-    {
-        case 1: //incluir
+        switch(y)
         {
-            string escolha;
-            do
+            case 1: //incluir
             {
-                x++;
-                pessoa[x].setagenda();
-                cout<<"\nDeseja Adicionar mais alguma pessoa nesta agenda ? S ou N : ";
-                cin>>escolha;
+                string escolha;
+                do
+                {
+                    qt++;
+                    x++;
+                    pessoa[x].setagenda();
+                    cout<<"\nDeseja Adicionar mais alguma pessoa nesta agenda ? S ou N : ";
+                    cin>>escolha;
+
+                }
+                while(escolha=="S"||escolha=="s");
+                break;
             }
-            while(escolha=="S"||escolha=="s");
-            break;
-        }
-        case 2: //listar
-        {
+            case 2: //listar
+            {
+                for(int i=0;i<qt;i++)
+                {
+                    pessoa[i].getagenda();
+                }
+                break;
+            }
+            case 3: //excluir
+            {
 
-            break;
-        }
-        case 3: //excluir
-        {
+                break;
+            }
+            case 4: //excluir
+            {
 
-            break;
-        }
-        case 4: //excluir
-        {
+                break;
+            }
+            case 5: //buscar
+            {
 
-            break;
-        }
-        case 5: //buscar
-        {
+                break;
+            }
+            case 6: //alterar
+            {
 
-            break;
-        }
-        case 6: //alterar
-        {
+                break;
+            }
+            case 7: //sair
+            {
 
-            break;
-        }
-        case 7: //sair
-        {
+                break;
+            }
+            default:
+            {
+                cout<<"\nNumero invalido digitado\n";
+                return false;
+            }
 
-            break;
         }
-        default:
-        {
-            cout<<"\nNumero invalido digitado\n";
-            return false;
-        }
-
-    }
-    return true;
+        return true;
 }
 

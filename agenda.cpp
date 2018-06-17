@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 void agenda::getagenda()
 {
     cout<<"\nNome = " << nome
@@ -28,6 +29,7 @@ void agenda::setnome()
 {
     cout<<"\n\t Digite o nome : ";
     cin.getline(nome,40);
+    cin.getline(nome,40);
 }
 void agenda::setende()
 {
@@ -49,7 +51,7 @@ void agenda::setidad()
         cin>>x;
         if(x<=0)
         {
-        cout<<"\nInsira um numero valido";
+        cout<<"\nInsira um numero valido \n\t ";
         }
         else
         {
@@ -68,7 +70,7 @@ void agenda::setnume()
         cin>>num;
         if(num<=0||num>99999999999)
         {
-            cout<<"\nInsira um numero valido";
+            cout<<"\nInsira um numero valido\n\t";
         }
         else
         {

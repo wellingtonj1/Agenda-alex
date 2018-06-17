@@ -7,8 +7,10 @@ using namespace std;
 
  class tela
 {
+
     agenda* pessoa;
     public:
+    int qt;
     int x;
     tela();
     bool changewind(int y);

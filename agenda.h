@@ -17,6 +17,7 @@ class agenda
 		int idade,telefone;
 
 	public:
+
         void setagenda();
         void getagenda();
         void setnome();

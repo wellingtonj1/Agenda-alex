@@ -11,11 +11,16 @@ using namespace std;
 int main()
 {
     int x;
+    string escolha;
 	tela in;
 	do
     {
-	cin>>x;
-    } while(!in.changewind(x));
-
+        do
+        {
+        cin>>x;
+        } while(!in.changewind(x));
+    cout<<"Deseja realizar outra operação ? S ou N : " ;
+    cin>>escolha;
+    }while(escolha=="s"||escolha=="S");
 
 }
