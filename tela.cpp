@@ -31,13 +31,19 @@ bool tela::changewind(int y)
             case 2: //listar
             {
                 fstream fgravar;
+ ;
                 fgravar.open("Pessoa.txt",ios::ate | ios::out | ios::in);
-
-                for(int i=0;i<x;i++)
+                if (fgravar.is_open())
                 {
-                    fgravar.write()
+                    for(int i=0;i<x;i++)
+                    {
+                        fgravar.write((char*)&pessoa[i].gettudo(),sizeof(agenda));
+
+                    }
+                    fgravar.close();
                 }
-                fgravar.close();
+                else
+                cout << "Unable to open file";
                 break;
             }
             case 3: //excluir
