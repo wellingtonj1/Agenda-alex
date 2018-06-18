@@ -10,6 +10,7 @@ void agenda::gettudo()
     email;
     idade;
     telefone;
+
 }
 
 void agenda::getagenda()
@@ -51,9 +52,7 @@ void agenda::setemail()
 }
 void agenda::setidad()
 {
-    int x;
     cout<<"\n\t Digite a idade : ";
-
     do
     {
         cin>>x;
@@ -70,13 +69,11 @@ void agenda::setidad()
 }
 void agenda::setnume()
 {
-    int num;
     cout<<"\n\t Digite o telefone com o dd com o numero 9 obrigatorio : ";
-
     do
     {
         cin>>num;
-        if(num<=0||num>99999999999)
+        if(num<=0||num>999999999999)
         {
             cout<<"\nInsira um numero valido\n\t";
         }
@@ -88,4 +85,23 @@ void agenda::setnume()
     while(num<=0||num>99999999999);
 }
 
+void agenda::apresenta()
+{
+    cout<<"1 incluir \n2 listar \n3 excluir \n4 excluir \n5 buscar \n6 alterar \n7 sair\n"<<endl;
+
+}
+bool agenda::changewind()
+{
+    setagenda();
+    cout<<"\nDeseja Adicionar mais alguma pessoa nesta agenda ? Sim ou Não : ";
+    cin>>escolha;
+    if(escolha=="S"||escolha=="s"||escolha=="sim"||escolha=="Sim")
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
 

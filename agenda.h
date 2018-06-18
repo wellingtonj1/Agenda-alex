@@ -7,6 +7,8 @@
 using namespace std;
 
 //tera nome endereço telefone email idade bool pr
+int num,x;
+string escolha;
 
 class agenda
 {
@@ -18,6 +20,7 @@ class agenda
 		int idade,telefone;
 
 	public:
+
         void gettudo();
         void setagenda();
         void getagenda();
@@ -26,6 +29,8 @@ class agenda
         void setemail();
         void setidad();
         void setnume();
+        bool changewind();
+        void apresenta();
 
 };
 #endif
