@@ -21,16 +21,19 @@ class agenda
 		long long telefone;
 
 	public:
-
-        void gettudo();
-        void setagenda();
-        void getagenda();
-        void setnome();
-        void setende();
-        void setemail();
-        void setidad();
-        void setnume();
-        void changewind();
+	
+        void setnome(char* origem);
+        void setende(char* origem);
+        void setemail(char* origem);
+        bool setidad();
+        bool setnume();
+	
+   
+        void getnome();
+        void getende();
+        void getemail();
+        void getidad();
+        void getnume();
         void apresenta();
 
 };
