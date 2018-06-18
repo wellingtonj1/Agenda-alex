@@ -1,14 +1,14 @@
 #ifndef AGENDA_H
 #define AGENDA_H
-#include "tela.h"
 #include <iostream>
 
 
 using namespace std;
 
 //tera nome endereço telefone email idade bool pr
-int num,x;
+int x;
 string escolha;
+long long num;
 
 class agenda
 {
@@ -17,7 +17,8 @@ class agenda
 		char nome[40];
 		char endere[80];
 		char email[40];
-		int idade,telefone;
+		int idade;
+		long long telefone;
 
 	public:
 
@@ -29,7 +30,7 @@ class agenda
         void setemail();
         void setidad();
         void setnume();
-        bool changewind();
+        void changewind();
         void apresenta();
 
 };
