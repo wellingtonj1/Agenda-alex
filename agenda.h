@@ -21,14 +21,14 @@ class agenda
 		long long telefone;
 
 	public:
-	
+
         void setnome(char* origem);
         void setende(char* origem);
         void setemail(char* origem);
-        bool setidad();
-        bool setnume();
-	
-   
+        bool setidad(int x);
+        bool setnume(long long x);
+
+
         void getnome();
         void getende();
         void getemail();

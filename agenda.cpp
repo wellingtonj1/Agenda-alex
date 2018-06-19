@@ -1,5 +1,6 @@
 #include "agenda.h"
 #include <iostream>
+#include <string.h>
 
 using namespace std;
 
@@ -10,32 +11,62 @@ void agenda::apresenta()
 
 void agenda::setnome(char* origem)
 {
-	strcpy(*nome,origem);
+	strcpy(nome,origem);
 }
 
 void agenda::setende(char* origem)
 {
-	strcpy(*endere,origem);
+	strcpy(endere,origem);
 }
 
 void agenda::setemail(char* origem)
 {
-	strcpy(*email,origem)
-})
+	strcpy(email,origem);
+}
 
-bool agenda::setidad()
+bool agenda::setidad(int x)
+{
+    if(x<=0)
+    {
+        cout<<"\nNumero invalido digitado ! ";
+        return false;
+    }
+    else
+    {
+        idade=x;
+        return true;
+    }
+}
 
-bool agenda::setnume()
+bool agenda::setnume(long long x)
+{
+    if(x<=0||x>999999999999)
+    {
+        return false;
+    }
+    else
+    {
+        telefone=x;
+        return true;
+    }
+
+}
 
 
 
 void agenda::getnome()
+{
+    cout<<nome;
+}
 
 void agenda::getende()
-
+{
+    cout<<endere;
+}
+/*
 void agenda::getemail()
 
 void agenda::getidad()
 
 void agenda::getnume()
-        
+*/
