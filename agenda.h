@@ -6,6 +6,7 @@
 using namespace std;
 
 //tera nome endereço telefone email idade bool pr
+//------------------------RELEASE------------------------
 int x;
 string escolha;
 long long num;
