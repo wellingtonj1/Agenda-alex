@@ -54,19 +54,26 @@ bool agenda::setnume(long long x)
 
 
 
-void agenda::getnome()
+void agenda::getnome(char* destino)
 {
-    cout<<nome;
+    strcpy(destino,nome);
 }
 
-void agenda::getende()
+void agenda::getende(char* destino)
 {
-    cout<<endere;
+    strcpy(destino,endere);
 }
-/*
-void agenda::getemail()
 
-void agenda::getidad()
+void agenda::getemail(char* destino)
+{
+	strcpy(destino,email);
+}
 
-void agenda::getnume()
-*/
+int agenda::getidad()
+{
+	return idade;
+}
+long long agenda::getnume()
+{
+	return telefone;
+}

@@ -30,11 +30,11 @@ class agenda
         bool setnume(long long x);
 
 
-        void getnome();
-        void getende();
-        void getemail();
-        void getidad();
-        void getnume();
+        void getnome(char* destino);
+        void getende(char* destino);
+        void getemail(char* destino);
+        int getidad();
+        long long getnume();
         void apresenta();
 
 };
