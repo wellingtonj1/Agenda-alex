@@ -1,12 +1,19 @@
 #include "agenda.h"
-#include <iostream>
-#include <string.h>
+#include <bits/stdc++.h>
+
 //------------------------RELEASE------------------------
 using namespace std;
 
 void agenda::apresenta()
 {
-    cout<<"1 incluir \n2 listar \n3 excluir \n4 excluir \n5 buscar \n6 alterar \n7 sair\n"<<endl;
+	system("clear");
+	puts("    Menu");
+	puts("Incluir [1]");
+	puts("Listar  [2]");
+	puts("Excluir [3]");
+	puts("Buscar  [4]");
+	puts("Alterar [5]");
+	puts("Sair    [0]");
 }
 
 void agenda::setnome(char* origem)
@@ -53,7 +60,7 @@ bool agenda::setnume(long long x)
 }
 
 
-
+/*
 void agenda::getnome(char* destino)
 {
     strcpy(destino,nome);
@@ -77,3 +84,4 @@ long long agenda::getnume()
 {
 	return telefone;
 }
+*/
