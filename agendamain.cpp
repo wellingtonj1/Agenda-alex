@@ -2,6 +2,7 @@
 #include "agenda.cpp"
 //------------------------RELEASE------------------------
 #include <bits/stdc++.h>
+#define NULO '\ 0'
 
 using namespace std;
 
@@ -11,7 +12,7 @@ int main()
 	string escolha2;
 		int x;
 		string escolha;
-		agenda p1;
+		agenda p1,Aux;;
 
         char cpnome[40];
         char cpendere[80];
@@ -73,18 +74,18 @@ int main()
 				}
 				case 2:
 				{
-					fstream Kaio;
-					Kaio.open("Pessoas.dat",ios::binary|ios::out|ios::in|ios::app);
-					Kaio.seekg(0,ios::end);
+					fstream red;
+					red.open("Pessoas.dat",ios::binary|ios::out|ios::in|ios::app);
+					red.seekg(0,ios::end);
 					
-					if (!Kaio.is_open())break;
-					int Qcontato = Kaio.tellp() / sizeof(agenda);
-					Kaio.seekg(0);
+					if (!red.is_open())break;
+					int Qcontato = red.tellp() / sizeof(agenda);
+					red.seekg(0);
 					printf("Quantidade de contatos %d\n\n\n",Qcontato);
 					for (int i = 0; i < Qcontato; i++)
 					{
-						agenda Aux;
-						Kaio.read((char*)&Aux,sizeof(agenda));
+						
+						red.read((char*)&Aux,sizeof(agenda));
 						
 						printf("\nNome: ");
 						cout<<Aux.nome<<endl;
@@ -103,10 +104,18 @@ int main()
 					}
 					
 					
-				Kaio.close();
+				red.close();
 												
+				break;
+				}
+				
+				case 3:
+				{
+					
 				
 				}
+								
+				
 			}
 			printf("\nVoltar ao menu [1]\nSair do Programa [0]\n[ ]\b\b");
 			cin>>escolha;
