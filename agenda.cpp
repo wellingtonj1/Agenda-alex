@@ -1,12 +1,13 @@
 #include "agenda.h"
 #include <bits/stdc++.h>
 
-//------------------------RELEASE------------------------
+//------------------------RELEASE------------------------1,1
 using namespace std;
 
 void agenda::apresenta()
 {
 	system("clear");
+	system("cls");
 	puts("    Menu");
 	puts("Incluir [1]");
 	puts("Listar  [2]");
@@ -59,29 +60,31 @@ bool agenda::setnume(long long x)
 
 }
 
-
-/*
-void agenda::getnome(char* destino)
+char agenda::getnome()
 {
-    strcpy(destino,nome);
+    string nome1=nome;
+    return  nome1[sizeof(nome1)];
 }
 
-void agenda::getende(char* destino)
+char agenda::getende()
 {
-    strcpy(destino,endere);
+    string endere1=endere;
+    return endere1[sizeof(endere1)];
 }
 
-void agenda::getemail(char* destino)
+char agenda::getemail()
 {
-	strcpy(destino,email);
+    string email1=email;
+    return email1[sizeof(email1)];
 }
 
 int agenda::getidad()
 {
 	return idade;
 }
+
 long long agenda::getnume()
 {
 	return telefone;
 }
-*/
+
