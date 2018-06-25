@@ -27,9 +27,9 @@ class agenda
         bool setnume(long long x);
 
 
-        char getnome();
-        char getende();
-        char getemail();
+        char* getnome();
+        char* getende();
+        char* getemail();
         int getidad();
         long long getnume();
 

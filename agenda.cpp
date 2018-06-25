@@ -60,22 +60,19 @@ bool agenda::setnume(long long x)
 
 }
 
-char agenda::getnome()
+char* agenda::getnome()
 {
-    string nome1=nome;
-    return  nome1[sizeof(nome1)];
+    return nome;
 }
 
-char agenda::getende()
+char* agenda::getende()
 {
-    string endere1=endere;
-    return endere1[sizeof(endere1)];
+    return endere;
 }
 
-char agenda::getemail()
+char* agenda::getemail()
 {
-    string email1=email;
-    return email1[sizeof(email1)];
+    return email;
 }
 
 int agenda::getidad()

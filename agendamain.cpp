@@ -135,13 +135,11 @@ int main()
                     cin.ignore();
                     cin.getline(nomeex,40);
 
-                    char auxnome[40];
                     for (int i = 0; i < Qcontato2; )
 					{
 
 					    exclude.read((char*)&Aux,sizeof(agenda));
-					    *auxnome=Aux.getnome();
-					    if(!strcmp(nomeex,auxnome))
+					    if(!strcmp(nomeex,Aux.getnome()))
                         {
                             i++;
                         }
@@ -183,12 +181,10 @@ int main()
                     cin.ignore();
                     cin.getline(nomeex,40);
 
-                    char auxnome[40];
                     for (int i = 0;i<Qcontato3;)
 					{
 					    busca.read((char*)&Aux,sizeof(agenda));
-					    *auxnome=Aux.getnome();
-					    if(!strcmp(nomeex,auxnome))
+					    if(!strcmp(nomeex,Aux.getnome()))
                         {
                             buscacp.write((char*)&Aux,sizeof(agenda));
                             printf("\nNome: ");
@@ -227,7 +223,76 @@ int main()
 
                 case 5:
                 {
+				
+					fstream busca;
+					busca.open("Pessoas.dat",ios::binary|ios::out|ios::in|ios::app);
+					busca.seekg(0,ios::end);
 
+                    fstream buscacp;
+					buscacp.open("Pessoascp.dat",ios::binary|ios::out|ios::in|ios::app);
+					buscacp.seekg(0,ios::end);
+					if (!busca.is_open())break;
+
+					int Qcontato4 = busca.tellp() / sizeof(agenda);
+
+					busca.seekg(0);
+					buscacp.seekg(0);
+
+					char nomealt[40];
+					printf("\nDigite o nome do contato que desejas Alterar : ");
+                    cin.ignore();
+                    cin.getline(nomealt,40);
+
+                    for (int i = 0;i<Qcontato4;)
+					{
+					    busca.read((char*)&Aux,sizeof(agenda));
+					    
+					    if(!strcmp(nomealt,Aux.getnome()))
+                        {
+							 cout<<"\nNome: ";							 
+							 cin.getline(cpnome,40);
+							 p1.setnome(cpnome);
+							 
+							 
+							 cout<<"Endereço: ";
+							 cin.getline(cpendere,80);
+							 p1.setende(cpendere);
+
+							 cout<<"Email: ";
+							 cin.getline(cpemail,40);
+							 p1.setemail(cpemail);
+							 cout<<"Idade: ";
+							 do
+							 {
+								cin>>cpidade;
+
+						   	 }
+							 while(!p1.setidad(cpidade));
+							 cout<<"Telefone: ";
+							 do
+							 {
+								cin.ignore();
+								cin>>cptelefone;
+							 }
+
+							 while(!p1.setnume(cptelefone));
+							 
+							 buscacp.write((char*)&p1,sizeof(agenda));
+							 i++;;						 
+						} 
+						else 
+						{
+							buscacp.write((char*)&Aux,sizeof(agenda));
+							i++;
+						}
+							
+					}
+					
+					busca.close();
+                    buscacp.close();
+                    remove("Pessoas.dat");
+                    rename("Pessoascp.dat","Pessoas.dat");
+					
                     break;
                 }
 
@@ -238,4 +303,5 @@ int main()
 
 
 		}while(escolha=="1");
+
 }
