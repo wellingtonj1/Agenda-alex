@@ -5,8 +5,7 @@
 
 using namespace std;
 
-//tera nome endereço telefone email idade bool pr
-//------------------------RELEASE------------------------1,1
+//------------------------------------------------IIbY. JapaBitsII------------------------------------------------
 int x;
 string escolha;
 long long num;
