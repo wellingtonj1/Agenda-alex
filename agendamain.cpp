@@ -9,10 +9,9 @@ using namespace std;
 int main()
 {
 
-	string escolha2;
+		string escolha2,escolha;
 		int x;
-		string escolha;
-		agenda p1,Aux;;
+		agenda p1,Aux;
 
         char cpnome[40];
         char cpendere[80];
@@ -38,26 +37,26 @@ int main()
 					arq.open("Pessoas.dat",ios::binary|ios::out|ios::in|ios::app);
 					if(arq.is_open())
 					{
-						cout<<"\nNome: ";
+						printf("\nNome: ");
 						cin.ignore();
 						cin.getline(cpnome,40);
 						p1.setnome(cpnome);
 
-						cout<<"Endereço: ";
+						printf("Endereço: ");
 						cin.getline(cpendere,80);
 						p1.setende(cpendere);
 
-						cout<<"Email: ";
+						printf("Email: ");
 						cin.getline(cpemail,40);
 						p1.setemail(cpemail);
-						cout<<"Idade: ";
+						printf("Idade: ");
 						do
 						{
 							cin>>cpidade;
 
 						}
 						while(!p1.setidad(cpidade));
-						cout<<"Telefone: ";
+						printf("Telefone: ");
 						do
 						{
 							cin.ignore();
